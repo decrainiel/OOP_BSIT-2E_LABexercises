@@ -1,18 +1,35 @@
-// Declarative Programming Example
-// Nag-focus ta sa unsa ang gusto buhaton, dili unsaon pag step-by-step
+public class Car {
+    private String color;
+    private String plateNo;
+    private String chassisNo;
+    private String brand;   
+    private String model;   
 
-public class Exer1_Declarative {
-    public static void main(String[] args) {
-        // Simple declarative: pagsulti nga ang formula para factorial
-        int number = 5;
-        int result = factorial(number);
-
-        System.out.println("Factorial of " + number + " = " + result);
+    // No-argument constructor
+    public Car() {
+        this.color = "No Color";
+        this.plateNo = "No Plate Number";
+        this.chassisNo = "No Chassis No Yet";
+        this.brand = "No Brand";
+        this.model = "No Model";
     }
 
-    // Declarative approach: recursive function (klaro ang gusto nga resulta, dili detalyado ang steps)
-    public static int factorial(int n) {
-        if (n == 0) return 1;
-        return n * factorial(n - 1); // recursion
+    // Parameterized constructor
+    public Car(String color, String plateNo, String chassisNo, String brand, String model) {
+        this.color = color;
+        this.plateNo = plateNo;
+        this.chassisNo = chassisNo;
+        this.brand = brand;
+        this.model = model;
+    }
+
+    // Method to display info
+    public void displayInfo() {
+        System.out.println("Car Information:");
+        System.out.println("Color     : " + this.color);
+        System.out.println("Plate No. : " + this.plateNo);
+        System.out.println("Chassis No: " + this.chassisNo);
+        System.out.println("Brand     : " + this.brand);
+        System.out.println("Model     : " + this.model);
     }
 }
